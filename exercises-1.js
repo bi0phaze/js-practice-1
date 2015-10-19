@@ -15,10 +15,14 @@
 function forEach(array, callback){
     // YOUR CODE HERE
 
-    for (var i - o ; i <100; i++){}
-
+  
+function forEach(array, callback){
+  for(var i = 0; i < array.length; i++) {
+    var a = array[i];
+    console.log(a);
+    callback(a);
+  }
 }
-
 // testing your code with console.assert
 var total = 1;
 forEach([1, 2, 3, 4], function(a){ total *= a; });
@@ -32,6 +36,11 @@ function sum(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
 
+ var total = 0;
+    for(var i = 0; i < args.length; i++){
+      total = total+=args[i];
+    }
+    return total
  
 
 
@@ -48,6 +57,12 @@ function average(){
     // parse arguments into an array
     var args = [].slice.call(arguments);
 
+    var avg = 0;
+    for (var i in args){
+      avg += args[i];
+    }
+    return avg / args.length
+
     // .. do something with each element of args
     // YOUR CODE HERE
 }
@@ -62,7 +77,15 @@ function largest(){
 
     // .. do something with each element of args
     // YOUR CODE HERE
+
+     var avg = 0;
+    for (var i in args){
+      avg += args[i];
+    }
+    return avg / args.length
+
 }
+
 
 console.assert( largest(2, 4, 6, 8) === 8 )
 
